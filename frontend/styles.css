@@ -1,0 +1,230 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ffeb3b, #fbc02d);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #fbc02d;
+    padding: 10px;
+}
+
+header .logo {
+    width: 80px;
+    margin-top: 10px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Timer */
+#timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px;
+    color: #d84315;
+}
+/* Puntaje en tiempo real */
+#score {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2e7d32;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Pregunta */
+#question-container {
+    margin: 20px;
+    padding: 10px;
+    background: #f1f8e9;
+    border-radius: 10px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#question {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Opciones */
+#options button {
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #e0e0e0;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+#options button:hover {
+    background: #c8e6c9;
+    transform: scale(1.05);
+}
+
+#options button.correct {
+    background-color: #4caf50;
+    color: white;
+}
+
+#options button.incorrect {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Puntaje */
+#score {
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botón de inicio */
+#start-btn {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #fbc02d;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#start-btn:hover {
+    background-color: #f57f17;
+}
+
+/* Botón Jugar de nuevo */
+#restart-btn {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #e08c2c;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+#restart-btn:hover {
+    background-color: #388e3c;
+}
+
+#restart-btn:hover {
+    background-color: #e64a19;
+}
+/* Ocultar puntaje durante el juego */
+#final-score.hidden {
+    display: none;
+}
+
+/* Ocultar elementos genéricos */
+.hidden {
+    display: none;
+}
+
+/* Finalizar */
+#final-score {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#final-score p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#final-score input {
+    width: 80%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#final-score button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#final-score button:hover {
+    background-color: #388e3c;
+}
+
+/* Ranking */
+#ranking {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f1f8e9;
+    border-radius: 10px;
+}
+
+#ranking h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#ranking ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ranking li {
+    font-size: 1rem;
+    margin: 5px 0;
+    background: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bonus-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff9800;
+    margin-top: 10px;
+    animation: fadeOut 1.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}

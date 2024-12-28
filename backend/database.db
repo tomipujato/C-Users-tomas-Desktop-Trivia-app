@@ -1,0 +1,32 @@
+// Guardar puntaje en el servidor
+saveScoreBtn.addEventListener('click', () => {
+    const name = playerNameInput.value || "Anónimo";
+    fetch('http://localhost:3000/api/ranking', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, score })
+    })
+    .then(response => response.json())
+    .then(() => fetchRanking())
+    .catch(err => console.error('Error al guardar el puntaje:', err));
+});
+
+// Obtener los mejores puntajes
+function fetchRanking() {
+    fetch('http://localhost:3000/api/ranking')
+    .then(response => response.json())
+    .then(data => {
+        rankingList.innerHTML = '';
+        data.forEach(entry => {
+            const li = document.createElement('li');
+            li.textContent = `${entry.name}: ${entry.score}`;
+            rankingList.appendChild(li);
+        });
+    })
+    .catch(err => console.error('Error al obtener el ranking:', err));
+}
+
+// Llamar al ranking al iniciar
+fetchRanking();

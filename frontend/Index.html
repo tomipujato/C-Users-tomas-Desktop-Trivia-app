@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia - Manos a la Obra</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Logo Manos a la Obra" class="logo">
+            <h1>Trivia - 15 Años</h1>
+        </header>
+        <main>
+    <div id="timer">1:15</div>
+    <div id="score">Puntaje: 0</div> <!-- Nuevo contenedor para el puntaje acumulado -->
+    <div id="question-container" class="hidden">
+        <p id="question"></p>
+        <div id="options"></div>
+    </div>
+</main>
+<footer>
+    <button id="start-btn">Iniciar Juego</button>
+    <button id="restart-btn" class="hidden">Jugar de Nuevo</button> <!-- Botón Reiniciar -->
+    <div id="final-score" class="hidden">
+        <p>Tu puntaje: <span id="final-score-value"></span></p>
+        <input type="text" id="player-name" placeholder="Ingresa tu nombre">
+        <button id="save-score-btn">Guardar Puntaje</button>
+    </div>
+    <div id="ranking" class="hidden">
+        <h2>Top 10 Puntajes</h2>
+        <ol id="ranking-list"></ol>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
